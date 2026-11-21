@@ -364,3 +364,116 @@ header .subtitle {
         padding: 10px;
     }
 }
+
+
+/* NEXORA GOLD EDITION */
+
+body {
+    background: #080807;
+}
+
+header h1 {
+    color: #f5c451;
+    text-shadow: 0 0 12px #d4a017, 0 0 30px #a87908;
+}
+
+header .subtitle {
+    color: #e6c778;
+}
+
+.welcome {
+    background: linear-gradient(135deg, #33260b, #151006);
+    border-color: #d4a017;
+    box-shadow: 0 0 25px #d4a01733;
+}
+
+.welcome h2,
+#content h2,
+.word-card h3,
+.translation-title {
+    color: #f5c451;
+    text-shadow: 0 0 12px #b8860b55;
+}
+
+.welcome p,
+#content p {
+    color: #e8dfc8;
+}
+
+.menu button {
+    background: linear-gradient(145deg, #30240b, #151006);
+    border-color: #b8860b;
+    box-shadow: 0 0 14px #d4a01722;
+}
+
+.menu button:hover {
+    background: linear-gradient(135deg, #b8860b, #755000);
+    box-shadow: 0 0 25px #d4a01788;
+}
+
+.menu button small {
+    color: #e6c778;
+}
+
+#content {
+    background: linear-gradient(145deg, #211a0c, #100d07);
+    border-color: #b8860b;
+    box-shadow: 0 0 20px #d4a01722;
+}
+
+.word-card,
+.reading-card,
+.question-card {
+    background: linear-gradient(145deg, #30240e, #171107);
+    border-color: #b8860b;
+    box-shadow: 0 0 14px #d4a01722;
+}
+
+.word-card h3 {
+    color: #f5c451;
+}
+
+.word-number {
+    color: #d4a017;
+}
+
+.back-button,
+.section-search button {
+    background: linear-gradient(135deg, #c99a20, #765000);
+    color: #080807;
+    font-weight: bold;
+}
+
+.back-button:hover,
+.section-search button:hover {
+    background: #f5c451;
+    box-shadow: 0 0 20px #d4a01788;
+}
+
+.question-card p {
+    color: #f5d77e;
+}
+
+.question-card button {
+    background: #30240e;
+    border-color: #b8860b;
+}
+
+.question-card button:hover:not(:disabled) {
+    background: #8a650e;
+    box-shadow: 0 0 20px #d4a01766;
+}
+
+.section-search input {
+    background: #1b160b;
+    border-color: #b8860b;
+}
+
+.section-search input:focus {
+    border-color: #f5c451;
+    box-shadow: 0 0 15px #d4a01766;
+}
+
+#searchMessage {
+    color: #f5c451;
+}
