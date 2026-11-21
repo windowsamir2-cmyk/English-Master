@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@capacitor/core": "^7.4.3",
-    "@capacitor/app": "^7.4.3"
+    "@capacitor/app": "^7.1.2"
   },
   "devDependencies": {
     "@capacitor/cli": "^7.4.3",
