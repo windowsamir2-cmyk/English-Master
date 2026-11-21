@@ -546,15 +546,68 @@ function clearSectionSearch() {
 
 function checkAnswer(button, correct) {
 
-    const buttons = button.parentElement.querySelectorAll("button");
+    const card = button.closest(".question-card");
+
+    if (!card) return;
+
+    const buttons = Array.from(card.querySelectorAll("button"));
 
     buttons.forEach(btn => {
         btn.disabled = true;
+        btn.style.cursor = "default";
     });
 
-    button.style.background = correct ? "#168542" : "#a52b35";
-    button.style.color = "white";
+    if (correct) {
 
+        button.style.background = "#168542";
+        button.style.borderColor = "#35d68a";
+        button.style.color = "#ffffff";
+
+    } else {
+
+        button.style.background = "#a52b35";
+        button.style.borderColor = "#ff6b7a";
+        button.style.color = "#ffffff";
+
+        const correctButton = buttons.find(btn => {
+            const action = btn.getAttribute("onclick") || "";
+            return /checkAnswer\s*\(\s*this\s*,\s*true\s*\)/.test(action);
+        });
+
+        if (correctButton) {
+            correctButton.style.background = "#168542";
+            correctButton.style.borderColor = "#35d68a";
+            correctButton.style.color = "#ffffff";
+        }
+    }
+
+    const oldFeedback = card.querySelector(".answer-feedback");
+
+    if (oldFeedback) {
+        oldFeedback.remove();
+    }
+
+    const feedback = document.createElement("p");
+
+    feedback.className = "answer-feedback";
+
+    feedback.style.cssText =
+        "text-align:center;font-weight:bold;margin-top:14px;direction:rtl;line-height:1.8;";
+
+    if (correct) {
+
+        feedback.textContent = "آفرین! پاسخ درست است. ✅";
+        feedback.style.color = "#35d68a";
+
+    } else {
+
+        feedback.innerHTML =
+            "پاسخ اشتباه است. ❌<br>گزینه سبزرنگ، پاسخ صحیح است. ✅";
+
+        feedback.style.color = "#ff7b86";
+    }
+
+    card.appendChild(feedback);
 }
 
 
@@ -566,26 +619,28 @@ function showHome() {
     document.getElementById("content").innerHTML = `
         <h2>آماده یادگیری هستید؟</h2>
 
-        
         <p>برای ورود به هر قسمت، روی دکمه موردنظر کلیک کنید.</p>
     `;
 
 }
 
+
 window.handleAppBack = function () {
-    const welcome = document.querySelector('.welcome');
-    const menu = document.querySelector('.menu');
+
+    const welcome = document.querySelector(".welcome");
+    const menu = document.querySelector(".menu");
 
     const isHome =
         welcome &&
         menu &&
-        getComputedStyle(welcome).display !== 'none' &&
-        getComputedStyle(menu).display !== 'none';
+        getComputedStyle(welcome).display !== "none" &&
+        getComputedStyle(menu).display !== "none";
 
     if (isHome) {
         return false;
     }
 
     showHome();
+
     return true;
 };
