@@ -1,10 +1,12 @@
 import { App } from '@capacitor/app';
 
-App.addListener('backButton', ({ canGoBack }) => {
+App.addListener('backButton', () => {
     if (typeof window.handleAppBack === 'function') {
-        window.handleAppBack();
-    } else if (canGoBack) {
-        window.history.back();
+        const handled = window.handleAppBack();
+
+        if (!handled) {
+            App.exitApp();
+        }
     } else {
         App.exitApp();
     }
