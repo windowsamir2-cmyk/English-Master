@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080510;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    direction: rtl;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #c77dff;
+    text-shadow: 0 0 12px #a020f0, 0 0 30px #8000ff;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+header .subtitle {
+    font-size: 17px;
+    color: #d8a8ff;
+}
+
+.welcome {
+    background: linear-gradient(135deg, #3b0875, #19082e);
+    border: 1px solid #a020f0;
+    border-radius: 18px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 0 25px #8a00ff55;
+    text-align: center;
+    direction: rtl;
+}
+
+.welcome h2 {
+    font-size: 25px;
+    color: #e0aaff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #a020f0;
+}
+
+.welcome p {
+    font-size: 17px;
+    line-height: 2;
+    color: #e4d4f5;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.menu button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    direction: ltr;
+    min-height: 95px;
+    background: linear-gradient(145deg, #25103f, #12091f);
+    color: white;
+    border: 1px solid #9d36ff;
+    border-radius: 14px;
+    padding: 20px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 14px #8a00ff33;
+}
+
+.menu button:hover {
+    background: linear-gradient(135deg, #8a16e8, #5900b8);
+    box-shadow: 0 0 25px #a020f0aa;
+    transform: translateY(-3px);
+}
+
+.menu button span {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu button small {
+    font-size: 15px;
+    color: #d9a0ff;
+    direction: rtl;
+}
+
+#content {
+    background: linear-gradient(145deg, #20102f, #100819);
+    border: 1px solid #8a16e8;
+    border-radius: 18px;
+    padding: 25px;
+    margin-top: 20px;
+    min-height: 150px;
+    text-align: center;
+    direction: rtl;
+    box-shadow: 0 0 20px #8a00ff33;
+}
+
+#content h2 {
+    color: #d18aff;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+#content p {
+    color: #e0d2ed;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.subtitle {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.word-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.word-card {
+    background: linear-gradient(145deg, #291342, #170b25);
+    border: 1px solid #9d36ff;
+    border-radius: 16px;
+    padding: 22px;
+    transition: 0.3s;
+    box-shadow: 0 0 14px #8a00ff33;
+}
+
+.word-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #a020f088;
+}
+
+.word-card h3 {
+    color: #d18aff;
+    font-size: 23px;
+    margin: 12px 0;
+}
+
+.word-card p {
+    color: white;
+    font-size: 17px;
+}
+
+.word-number {
+    color: #bd65ff;
+    font-size: 13px;
+}
+
+.back-button {
+    background: linear-gradient(135deg, #8a16e8, #5900b8);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #a020f0;
+    box-shadow: 0 0 20px #a020f0;
+}
+
+.reading-card {
+    background: linear-gradient(145deg, #291342, #170b25);
+    border: 1px solid #9d36ff;
+    border-radius: 16px;
+    padding: 22px;
+    margin: 20px 0;
+    box-shadow: 0 0 14px #8a00ff33;
+}
+
+.reading-card h3 {
+    color: #d18aff;
+    margin-bottom: 15px;
+}
+
+.reading-card p {
+    margin: 10px 0;
+}
+
+.persian {
+    direction: rtl;
+}
+
+.question-card {
+    background: linear-gradient(145deg, #291342, #170b25);
+    border: 1px solid #8a16e8;
+    border-radius: 18px;
+    padding: 22px;
+    margin: 20px 0;
+    box-shadow: 0 0 16px #8a00ff33;
+}
+
+.question-card p {
+    color: #e0baff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.question-card button {
+    display: block;
+    width: 100%;
+    background: #30154a;
+    color: white;
+    border: 1px solid #9d36ff;
+    border-radius: 12px;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.question-card button:hover:not(:disabled) {
+    background: #7620c9;
+    box-shadow: 0 0 20px #a020f088;
+    transform: translateY(-2px);
+}
+
+.question-card button:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+.translation-title {
+    color: #d18aff;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Search */
+
+.section-search {
+    display: flex;
+    gap: 8px;
+    margin: 20px 0;
+    direction: rtl;
+}
+
+.section-search input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #9d36ff;
+    border-radius: 12px;
+    background: #1b1028;
+    color: white;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.section-search input::placeholder {
+    color: #bba1d2;
+}
+
+.section-search input:focus {
+    border-color: #d18aff;
+    box-shadow: 0 0 15px #8a00ff;
+}
+
+.section-search button {
+    border: 1px solid #a020f0;
+    border-radius: 12px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #8a16e8, #5900b8);
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.section-search button:hover {
+    background: #a020f0;
+    box-shadow: 0 0 18px #a020f0;
+}
+
+#searchMessage {
+    color: #d18aff;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* Text Direction */
+
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content p,
+#content li,
+#content button,
+#content span,
+#content strong {
+    unicode-bidi: plaintext;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    #content {
+        padding: 15px;
+    }
+
+    .word-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu button {
+        padding: 15px 8px;
+    }
+
+    .menu button span {
+        font-size: 18px;
+    }
+
+    .section-search {
+        gap: 6px;
+    }
+
+    .section-search input {
+        font-size: 13px;
+    }
+
+    .section-search button {
+        padding: 10px;
+    }
+}

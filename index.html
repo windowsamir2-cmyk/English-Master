@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="برنامه آموزش زبان انگلیسی پایه یازدهم، درس اول، همراه با لغات، گرامر، مکالمه، آزمون و بازی آموزشی.">
+
+    <meta name="theme-color" content="#090611">
+
+    <title>English Master | آموزش زبان انگلیسی</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .about-page {
+            position: relative;
+            overflow: hidden;
+            min-height: 520px;
+            padding: 35px 20px 25px;
+            margin-top: 25px;
+            border-radius: 25px;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(145, 50, 255, 0.22), transparent 35%),
+                radial-gradient(circle at 85% 75%, rgba(80, 20, 180, 0.2), transparent 35%),
+                linear-gradient(145deg, #10091f, #080510 70%);
+            border: 1px solid rgba(180, 100, 255, 0.3);
+            box-shadow: 0 0 35px rgba(135, 45, 255, 0.18);
+            text-align: center;
+        }
+
+        .about-page * {
+            box-sizing: border-box;
+        }
+
+        .about-decoration {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.35;
+            pointer-events: none;
+            animation: aboutFloat 5s ease-in-out infinite;
+            filter: drop-shadow(0 0 12px #a855f7);
+        }
+
+        .about-decoration:nth-child(1) {
+            top: 35px;
+            left: 25px;
+        }
+
+        .about-decoration:nth-child(2) {
+            top: 150px;
+            right: 20px;
+            animation-delay: 1s;
+        }
+
+        .about-decoration:nth-child(3) {
+            bottom: 150px;
+            left: 30px;
+            animation-delay: 2s;
+        }
+
+        .about-decoration:nth-child(4) {
+            bottom: 80px;
+            right: 25px;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes aboutFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(12deg);
+            }
+        }
+
+        .about-heading {
+            position: relative;
+            z-index: 1;
+            color: #d8b4fe;
+            font-size: 30px;
+            margin: 5px 0 12px;
+            text-shadow: 0 0 15px #a855f7;
+        }
+
+        .about-caption {
+            position: relative;
+            z-index: 1;
+            color: #c4b5fd;
+            margin-bottom: 35px;
+            font-size: 14px;
+        }
+
+        .about-card {
+            position: relative;
+            z-index: 1;
+            padding: 28px 18px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.055);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.12);
+        }
+
+        .about-avatar {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 38px;
+            background: linear-gradient(135deg, #9333ea, #4c1d95);
+            border: 2px solid #d8b4fe;
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+        }
+
+        .about-name {
+            color: #ffffff;
+            font-size: 19px;
+            font-weight: bold;
+            direction: ltr;
+            margin: 12px 0 25px;
+            text-shadow: 0 0 12px rgba(192, 132, 252, 0.6);
+            overflow-wrap: anywhere;
+        }
+
+        .about-telegram {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 30px;
+            color: white;
+            background: linear-gradient(135deg, #9333ea, #6d28d9);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            direction: ltr;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
+            transition: 0.3s;
+        }
+
+        .about-telegram:hover {
+            transform: scale(1.06);
+            box-shadow: 0 0 30px #9333ea;
+        }
+
+        .about-divider {
+            width: 65%;
+            height: 1px;
+            margin: 35px auto 22px;
+            background: linear-gradient(90deg, transparent, #a855f7, transparent);
+        }
+
+        .about-brand {
+            position: relative;
+            z-index: 1;
+            margin: 15px 0 5px;
+            color: #e9d5ff;
+            font-family: Arial, sans-serif;
+            font-size: clamp(38px, 10vw, 58px);
+            font-weight: 900;
+            letter-spacing: 7px;
+            direction: ltr;
+            text-shadow:
+                0 0 8px #c084fc,
+                0 0 20px #9333ea,
+                0 0 40px #7e22ce;
+        }
+
+        .about-brand-caption {
+            position: relative;
+            z-index: 1;
+            color: #a78bfa;
+            font-size: 12px;
+            letter-spacing: 3px;
+            direction: ltr;
+        }
+
+        .about-back {
+            position: relative;
+            z-index: 1;
+            margin-top: 30px;
+            padding: 12px 30px;
+            border: 1px solid #a855f7;
+            border-radius: 25px;
+            color: white;
+            background: rgba(147, 51, 234, 0.15);
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .about-back:hover {
+            background: #7e22ce;
+            box-shadow: 0 0 20px #9333ea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>آموزش زبان انگلیسی</h1>
+        <p class="subtitle">ویژه دانش‌آموزان پایه یازدهم | درس اول</p>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>به دنیای یادگیری زبان انگلیسی خوش آمدید!</h2>
+
+            <p>
+                در این برنامه، درس اول زبان انگلیسی را
+                به روشی ساده و جذاب یاد بگیرید.
+            </p>
+        </section>
+
+        <section class="menu">
+
+            <button onclick="openSection('vocabulary')">
+                <span>Vocabulary</span>
+                <small>آموزش لغات</small>
+            </button>
+
+            <button onclick="openSection('reading')">
+                <span>Reading</span>
+                <small>متن و درک مطلب</small>
+            </button>
+
+            <button onclick="openSection('grammar')">
+                <span>Grammar</span>
+                <small>آموزش گرامر</small>
+            </button>
+
+            <button onclick="openSection('speaking')">
+                <span>Speaking</span>
+                <small>مکالمه و داستان‌گویی</small>
+            </button>
+
+            <button onclick="openSection('writing')">
+                <span>Writing</span>
+                <small>آموزش نوشتن</small>
+            </button>
+
+            <button onclick="openSection('quiz')">
+                <span>Quiz</span>
+                <small>آزمون و سنجش یادگیری</small>
+            </button>
+
+            <button onclick="openSection('game')">
+                <span>🎮 بازی ماجراجویی</span>
+                <small>۱۵ مرحله چالش انگلیسی</small>
+            </button>
+
+            <button onclick="showAbout()">
+                <span> درباره ما</span>
+                <small>معرفی سازنده برنامه</small>
+            </button>
+
+        </section>
+
+        <section id="content">
+
+            <h2>آماده شروع هستید؟</h2>
+
+            <p>
+                برای ورود به هر قسمت،
+                روی دکمه موردنظر کلیک کنید.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="quiz.js"></script>
+    <script src="game.js"></script>
+
+    <script>
+        function showAbout() {
+            document.querySelector(".welcome").style.display = "none";
+            document.querySelector(".menu").style.display = "none";
+
+            const content = document.getElementById("content");
+
+            content.innerHTML = `
+                <section class="about-page">
+
+                    <div class="about-decoration">✦</div>
+                    <div class="about-decoration">💜</div>
+                    <div class="about-decoration">⚡</div>
+                    <div class="about-decoration">✧</div>
+
+                    <h2 class="about-heading">درباره ما</h2>
+
+                    <p class="about-caption">
+                        خلاقیت، تکنولوژی و یادگیری در کنار هم
+                    </p>
+
+                    <div class="about-card">
+
+                        <div class="about-avatar">
+                            👨‍💻
+                        </div>
+
+                        <p style="color:#c4b5fd; margin-bottom:8px;">
+                            توسعه‌دهنده و سازنده
+                        </p>
+
+                        <h3 class="about-name">
+                            AMIR MOHAMMAD TAMIZY
+                        </h3>
+
+                        <a
+                            class="about-telegram"
+                            href="https://t.me/IM_AMIRT_M"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ✈️ @IM_AMIRT_M
+                        </a>
+
+                        <div class="about-divider"></div>
+
+                        <p style="color:#c4b5fd; font-size:13px;">
+                            ساخته‌شده با خلاقیت و علاقه 💜
+                        </p>
+
+                    </div>
+
+                    <div class="about-brand">
+                        NEXORA
+                    </div>
+
+                    <p class="about-brand-caption">
+                        BEYOND THE LIMITS
+                    </p>
+
+                    <button class="about-back" onclick="showHome()">
+                        ↩ بازگشت به صفحه اصلی
+                    </button>
+
+                </section>
+            `;
+        }
+    </script>
+
+</body>
+</html>
