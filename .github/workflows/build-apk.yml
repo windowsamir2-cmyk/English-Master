@@ -33,6 +33,9 @@ jobs:
           mkdir -p www
           cp index.html style.css script.js quiz.js game.js www/
 
+      - name: Bundle back button
+        run: npx esbuild app-back.js --bundle --format=iife --outfile=www/app-back.bundle.js
+
       - name: Add Android
         run: npx cap add android
 
