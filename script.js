@@ -565,7 +565,27 @@ function showHome() {
 
     document.getElementById("content").innerHTML = `
         <h2>آماده یادگیری هستید؟</h2>
+
+        
         <p>برای ورود به هر قسمت، روی دکمه موردنظر کلیک کنید.</p>
     `;
 
 }
+
+window.handleAppBack = function () {
+    const welcome = document.querySelector('.welcome');
+    const menu = document.querySelector('.menu');
+
+    const isHome =
+        welcome &&
+        menu &&
+        getComputedStyle(welcome).display !== 'none' &&
+        getComputedStyle(menu).display !== 'none';
+
+    if (isHome) {
+        return false;
+    }
+
+    showHome();
+    return true;
+};
